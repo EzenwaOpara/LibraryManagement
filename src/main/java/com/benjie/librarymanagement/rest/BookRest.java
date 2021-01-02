@@ -12,6 +12,8 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
+import java.net.URI;
 
 @Path("books")
 @Produces(MediaType.APPLICATION_JSON)
@@ -25,16 +27,29 @@ public class BookRest {
     @Path("create")
     public Response createBook(Book book) {
         //TODO: Add security to allow only admin to create books
+        if (bookService.exists(book.getIsbn())) {
+            return Response.status(/*Response.Status.CONFLICT*/ 409,
+                    "A book with same ISBN already exists").build();
+        }
+
         bookService.createBook(book);
-        return Response.ok(book).build();
+
+        URI location = UriBuilder.fromResource(BookRest.class)
+                .queryParam("isbn", book.getIsbn())
+                .build();
+
+        return Response.created(location).build();
     }
 
     @PUT
-    @Path("update")
-    public Response updateBook(Book book) {
+    @Path("update/{isbn}")
+    public Response updateBook(@PathParam("isbn") String isbn, Book book) {
         //TODO: Add to check if user is admin
-        bookService.updateBook(book);
+        if (bookService.updateBook(isbn, book) != null) {
         return Response.ok(book).build();
+        }
+        return Response.status(404,
+                "Book with the following ISBN: " + isbn + " does not exit.").build();
     }
 
     @POST

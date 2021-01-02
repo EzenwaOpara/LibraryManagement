@@ -27,9 +27,12 @@ public class BookService {
         return book;
     }
 
-    public Book updateBook(Book book) {
-        entityManager.merge(book);
-        return book;
+    public Book updateBook(String isbn, Book book) {
+        if (exists(isbn)) {
+            entityManager.merge(book);
+            return book;
+        }
+        return null;
     }
 
     public Book borrowBook(Book book) {
@@ -62,5 +65,13 @@ public class BookService {
 
     public List<Book> findBooksByISBN(String isbn) {
         return bookQueryService.findBooksByISBN(isbn);
+    }
+
+    public boolean exists(String isbn) {
+        if (bookQueryService.findBooksByISBN(isbn).isEmpty() || bookQueryService.findBooksByISBN(isbn) == null) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
