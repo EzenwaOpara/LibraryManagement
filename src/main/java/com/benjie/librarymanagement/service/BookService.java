@@ -7,10 +7,10 @@ package com.benjie.librarymanagement.service;
 
 import com.benjie.librarymanagement.entity.Book;
 
-import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import java.time.LocalDate;
 import java.util.List;
 
 @Stateless
@@ -29,26 +29,84 @@ public class BookService {
 
     public Book updateBook(String isbn, Book book) {
         if (exists(isbn)) {
-            entityManager.merge(book);
-            return book;
+            Book existingBook = bookQueryService.findBooksByISBN(isbn).get(0);
+
+            if (book.getIllustrations() != null)
+                existingBook.setIllustrations(book.getIllustrations());
+            if (book.getAuthor() != null)
+                existingBook.setAuthor(book.getAuthor());
+            if (book.getAvailableCopies() != null)
+                existingBook.setAvailableCopies(book.getAvailableCopies());
+            if (book.getDescription() != null)
+                existingBook.setDescription(book.getDescription());
+            if (book.getNbOfPage() != null)
+                existingBook.setNbOfPage(book.getNbOfPage());
+            if (book.getTitle() != null)
+                existingBook.setTitle(book.getTitle());
+            if (book.getIsbn() != null)
+                existingBook.setIsbn(book.getIsbn());
+            if (book.getDateUpdated() != null)
+                existingBook.setDateUpdated(LocalDate.now());
+
+            entityManager.merge(existingBook);
+            return existingBook;
         }
         return null;
     }
 
-    public Book borrowBook(Book book) {
-        //TODO: reduce book count
-        entityManager.merge(book);
-        return book;
+
+    //return 1 if successful, 0 if unavailable, 2 if restricted and -1 if book does not exist
+    public int borrowBook(String isbn) {
+        if (exists(isbn)) {
+            Book book = bookQueryService.findBooksByISBN(isbn).get(0);
+            Long availableBooks = book.getAvailableCopies();
+            if (book.getLocked()) {
+                return 2;
+            }
+            if (availableBooks > 0) {
+                book.setAvailableCopies(availableBooks - 1);
+                entityManager.merge(book);
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+        return -1;
     }
 
-    public Book restrictBook(Book book) {
-        entityManager.merge(book);
-        return book;
+    //return 1 if successful and -1 if book does not exist
+    public int returnBook(String isbn) {
+        //TODO check if the caller actually borrowed a book
+        if (exists(isbn)) {
+            Book book = bookQueryService.findBooksByISBN(isbn).get(0);
+            Long availableBooks = book.getAvailableCopies();
+            book.setAvailableCopies(++availableBooks);
+            entityManager.merge(book);
+            return 1;
+        }
+        return -1;
     }
 
-    public Book removeBook(Book book) {
-        entityManager.remove(book);
-        return book;
+    //return 1 if successful and -1 if book does not exist
+    public int restrictBook(String isbn, boolean state) {
+        if (exists(isbn)) {
+            Book book = bookQueryService.findBooksByISBN(isbn).get(0);
+            book.setLocked(state);
+            entityManager.merge(book);
+            if (state) return 1;
+            else return 0;
+        }
+        return -1;
+    }
+
+    //return 1 if successful and -1 if book does not exist
+    public int removeBook(String isbn) {
+        if (exists(isbn)) {
+            Book book = bookQueryService.findBooksByISBN(isbn).get(0);
+            entityManager.remove(book);
+            return 1;
+        }
+        return -1;
     }
 
     public List<Book> findAllBooks() {

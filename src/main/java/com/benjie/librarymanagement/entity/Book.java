@@ -68,6 +68,8 @@ public class Book implements Serializable {
     @FutureOrPresent
     private LocalDate dateReturned;
 
+    private LocalDate dateUpdated;
+
     @NotNull
     private Long availableCopies;
 
@@ -212,5 +214,13 @@ public class Book implements Serializable {
 
     public void setLibraryUser(Collection<LibraryUser> libraryUser) {
         this.libraryMember = libraryUser;
+    }
+
+    public LocalDate getDateUpdated() {
+        return dateUpdated;
+    }
+
+    public void setDateUpdated(LocalDate dateUpdated) {
+        this.dateUpdated = dateUpdated;
     }
 }
