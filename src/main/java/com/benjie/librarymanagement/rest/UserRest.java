@@ -12,28 +12,28 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-//@Path("user")
+@Path("user")
 public class UserRest {
 
-//    @Path("login")
-//    @POST
-//    public Response login(String email, String password) {
-//
-//        //TODO: implement login
-//        return null;
-//    }
-//
-//    @Path("create")
-//    @POST
-//    public Response createUser(LibraryUser libraryUser) {
-//        //TODO: implement this
-//        return null;
-//    }
-//
-//    @Path("create")
-//    @POST
-//    public Response createUser(LibraryAdmin libraryAdmin) {
-//        //TODO: implement this
-//        return null;
-//    }
+    @Path("login")
+    @POST
+    public Response login(String email, String password) {
+
+        //TODO: implement login
+        return null;
+    }
+
+    @Path("create")
+    @POST
+    public Response createUser(LibraryUser libraryUser) {
+        //TODO: implement this
+        return null;
+    }
+
+    @Path("create")
+    @POST
+    public Response createUser(LibraryAdmin libraryAdmin) {
+        //TODO: implement this
+        return null;
+    }
 }

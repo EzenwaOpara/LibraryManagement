@@ -53,8 +53,8 @@ public abstract class LibraryMember implements Serializable {
     private String passwordSalt;
 
 
-    @ManyToMany
-    @JoinTable(name = "jnd_member_book",
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "jnd_lib_member_book",
             joinColumns = @JoinColumn(name = "borrower_fk"),
             inverseJoinColumns = @JoinColumn(name = "book_fk"))
     private Collection<Book> currentHolder = new ArrayList<>();

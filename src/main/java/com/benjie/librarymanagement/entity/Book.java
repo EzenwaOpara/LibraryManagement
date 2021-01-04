@@ -73,7 +73,7 @@ public class Book implements Serializable {
     @NotNull
     private Long availableCopies;
 
-    @ManyToMany(mappedBy = "currentHolder")
+    @ManyToMany(mappedBy = "currentHolder", fetch = FetchType.EAGER)
     private Collection<LibraryUser> libraryMember = new ArrayList<>();
 
     public Book() {

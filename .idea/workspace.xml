@@ -6,15 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3baa947b-cca8-48f9-aaaf-0c387aa6e35f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/BookRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/BookRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryMember.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/BookRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/BookRest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/service/BookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/BookRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/BookRest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/Book.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609620821400</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="modified endpoint methods and added some error and edge cases handling">
+      <created>1609707348490</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609707348490</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +175,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="slight modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="slight modification" />
+    <MESSAGE value="modified endpoint methods and added some error and edge cases handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified endpoint methods and added some error and edge cases handling" />
   </component>
   <component name="WindowStateProjectService">
     <state x="163" y="0" key="#Project_Structure" timestamp="1609535516424">
@@ -184,10 +187,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="488" y="67" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1609682147698" />
-    <state x="239" y="0" key="CommitChangelistDialog2" timestamp="1609620817851">
+    <state x="239" y="0" key="CommitChangelistDialog2" timestamp="1609707345945">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="239" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1609620817851" />
+    <state x="239" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1609707345945" />
     <state width="1323" height="238" key="GridCell.Tab.0.bottom" timestamp="1609537093793">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -224,9 +227,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1609536403885" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1609621026518">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1609707355672">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1609621026518" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1609707355672" />
   </component>
 </project>

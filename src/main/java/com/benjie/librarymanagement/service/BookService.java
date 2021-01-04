@@ -22,9 +22,9 @@ public class BookService {
     @Inject
     private BookQueryService bookQueryService;
 
-    public Book createBook(Book book) {
+    public void createBook(Book book) {
         entityManager.persist(book);
-        return book;
+//        return book;
     }
 
     public Book updateBook(String isbn, Book book) {
