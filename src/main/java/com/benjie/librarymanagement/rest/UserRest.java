@@ -10,6 +10,8 @@ import com.benjie.librarymanagement.entity.LibraryUser;
 
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 @Path("user")
@@ -23,16 +25,9 @@ public class UserRest {
         return null;
     }
 
-    @Path("create")
+    @Path("create/{user_type}")
     @POST
-    public Response createUser(LibraryUser libraryUser) {
-        //TODO: implement this
-        return null;
-    }
-
-    @Path("create")
-    @POST
-    public Response createUser(LibraryAdmin libraryAdmin) {
+    public Response createUser(@PathParam("user") LibraryUser libraryUser, @PathParam("admin") LibraryAdmin libraryAdmin) {
         //TODO: implement this
         return null;
     }
