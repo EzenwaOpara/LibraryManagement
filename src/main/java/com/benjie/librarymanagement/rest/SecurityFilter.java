@@ -42,11 +42,11 @@ public class SecurityFilter implements ContainerRequestFilter {
         //Otherwise we throw an exception with a message
 
         String authString = containerRequestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
-        if (authString == null || authString.isEmpty() || !authString.startsWith("Bearer")) {
+        if (authString == null || authString.isEmpty() || !authString.startsWith(SecurityUtil.BEARER)) {
             throw new NotAuthorizedException(Response.status(Response.Status.UNAUTHORIZED).build());
         }
 
-        String token = authString.substring("Bearer".length()).trim();
+        String token = authString.substring(SecurityUtil.BEARER.length()).trim();
 
         try {
             Key key = securityUtil.getSecurityKey();
@@ -80,7 +80,7 @@ public class SecurityFilter implements ContainerRequestFilter {
                 }
             });
         } catch (Exception e) {
-            throw new NotAuthorizedException(Response.status(Response.Status.UNAUTHORIZED).build());
+            containerRequestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
         }
     }
 

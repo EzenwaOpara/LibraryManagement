@@ -1,10 +1,15 @@
+com\benjie\librarymanagement\rest\SecurityFilter$1$1.class
 com\benjie\librarymanagement\service\MemberQueryService.class
 com\benjie\librarymanagement\entity\Book.class
 com\benjie\librarymanagement\service\BookQueryService.class
 com\benjie\librarymanagement\entity\LibraryMember.class
+com\benjie\librarymanagement\service\SecurityUtil.class
+com\benjie\librarymanagement\service\LibraryMemberService.class
 com\benjie\librarymanagement\entity\LibraryAdmin.class
+com\benjie\librarymanagement\rest\SecurityFilter$1.class
 com\benjie\librarymanagement\rest\BookRest.class
 com\benjie\librarymanagement\service\BookService.class
+com\benjie\librarymanagement\rest\SecurityFilter.class
 com\benjie\librarymanagement\service\CDIProducer.class
 com\benjie\librarymanagement\entity\LibraryUser.class
 com\benjie\librarymanagement\rest\Authz.class

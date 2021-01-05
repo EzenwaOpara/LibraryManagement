@@ -68,11 +68,11 @@ public class SecurityUtil {
     }
 
     public boolean authenticateUser(String email, String password) {
-        LibraryMember user = memberQueryService.findMemberByEmail(email);
-        if (user == null) {
+        LibraryMember member = memberQueryService.findMemberByEmail(email);
+        if (member == null) {
             return false;
         }
-        return passwordMatch(user.getPassword(), user.getPasswordSalt(), password);
+        return passwordMatch(member.getPassword(), member.getPasswordSalt(), password);
     }
 
     private SecretKey generateKey() {

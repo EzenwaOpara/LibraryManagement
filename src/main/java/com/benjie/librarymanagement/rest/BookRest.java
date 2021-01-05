@@ -18,6 +18,7 @@ import java.net.URI;
 @Path("books")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
+@Authz
 public class BookRest {
 
     @Inject

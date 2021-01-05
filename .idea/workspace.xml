@@ -4,38 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3baa947b-cca8-48f9-aaaf-0c387aa6e35f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_cache_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_core_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_ogdl_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_cipher_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_core_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_hash_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_event_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_lang_1_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/SecurityFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/SecurityUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LibraryManagement_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/LibraryManagement_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+    <list default="true" id="3baa947b-cca8-48f9-aaaf-0c387aa6e35f" name="Default Changelist" comment="added SecurityFilter and SecurityUtil also added some dependencies">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibraryManagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryManagement.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/BookRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/BookRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/SecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/UserRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/UserRest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/MemberQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/MemberQueryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/SecurityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/SecurityUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/LibraryMemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/LibraryMember.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/LibraryMember.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/BookRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/BookRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/UserRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/UserRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/service/MemberQueryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/service/MemberQueryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/LibraryMember.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/LibraryMember.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/BookRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/BookRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/UserRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/UserRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/service/MemberQueryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/service/MemberQueryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +155,7 @@
       <workItem from="1609525210690" duration="1572000" />
       <workItem from="1609531113174" duration="631000" />
       <workItem from="1609534996060" duration="920000" />
-      <workItem from="1609858751820" duration="2992000" />
+      <workItem from="1609858751820" duration="17777000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1609506801177</created>
@@ -199,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609793623007</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added SecurityFilter and SecurityUtil also added some dependencies">
+      <created>1609866257503</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609866257504</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +223,7 @@
     <MESSAGE value="modified endpoint methods and added some error and edge cases handling" />
     <MESSAGE value="modified the ManyToMany database modelling" />
     <MESSAGE value="started working on user service and user rest endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="started working on user service and user rest endpoints" />
+    <MESSAGE value="added SecurityFilter and SecurityUtil also added some dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="added SecurityFilter and SecurityUtil also added some dependencies" />
   </component>
 </project>

@@ -31,9 +31,18 @@ public class MemberQueryService {
     }
 
     public LibraryMember findMemberByEmail(String email) {
-        return entityManager.createNamedQuery(LibraryMember.FIND_MEMBER_BY_EMAIL, LibraryMember.class)
+        List<LibraryMember> member = entityManager.createNamedQuery(LibraryMember.FIND_MEMBER_BY_EMAIL, LibraryMember.class)
                 .setParameter("email", email)
-                .getResultList()
-                .get(0);
+                .getResultList();
+
+        if (!member.isEmpty()) {
+            return member.get(0);
+        }
+        return null;
+    }
+
+    public List countMembersByEmail(String email) {
+        return entityManager.createNativeQuery("select count (id)  from LibraryMember where exists (select id from LibraryMember where email = ?)")
+                .setParameter(1, email).getResultList();
     }
 }
