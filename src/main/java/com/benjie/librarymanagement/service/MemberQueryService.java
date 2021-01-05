@@ -29,4 +29,11 @@ public class MemberQueryService {
                 .setParameter("lastName", lastName)
                 .getResultList();
     }
+
+    public LibraryMember findMemberByEmail(String email) {
+        return entityManager.createNamedQuery(LibraryMember.FIND_MEMBER_BY_EMAIL, LibraryMember.class)
+                .setParameter("email", email)
+                .getResultList()
+                .get(0);
+    }
 }

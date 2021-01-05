@@ -19,4 +19,9 @@ public class UserService {
 
         return null;
     }
+
+    public boolean authenticateUser(String email, String password) {
+
+        return false;
+    }
 }

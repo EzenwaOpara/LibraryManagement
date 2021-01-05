@@ -13,6 +13,24 @@
         <element id="directory" name="classes">
           <element id="module-output" name="LibraryManagement" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt:0.9.1" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.6" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.6" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-core:1.7.0" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-lang:1.7.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.26" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-cache:1.7.0" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-crypto-hash:1.7.0" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-crypto-core:1.7.0" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-crypto-cipher:1.7.0" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-config-core:1.7.0" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-config-ogdl:1.7.0" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.4" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.2" />
+          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-event:1.7.0" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />

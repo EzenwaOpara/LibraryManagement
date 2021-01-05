@@ -18,12 +18,14 @@ import java.util.Collection;
 
 @Entity
 @MappedSuperclass
-@NamedQuery(name = LibraryMember.FIND_MEMBER_BY_NAME, query = "select l from LibraryUser l where l.firstName like :firstName or l.lastName like :lastName")
-@NamedQuery(name = LibraryMember.FIND_MEMBER_BY_ID, query = "select l from LibraryUser l where l.id = :id")
+@NamedQuery(name = LibraryMember.FIND_MEMBER_BY_NAME, query = "select l from LibraryMember l where l.firstName like :firstName or l.lastName like :lastName")
+@NamedQuery(name = LibraryMember.FIND_MEMBER_BY_ID, query = "select l from LibraryMember l where l.id = :id")
+@NamedQuery(name = LibraryMember.FIND_MEMBER_BY_EMAIL, query = "select l from LibraryMember l where l.email = :email")
 public abstract class LibraryMember implements Serializable {
 
     public static final String FIND_MEMBER_BY_NAME = "LibraryMember.findMemberByName";
     public static final String FIND_MEMBER_BY_ID = "LibraryMember.findMemberById";
+    public static final String FIND_MEMBER_BY_EMAIL = "LibraryMember.findMemberByEmail";
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
