@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.nio.file.attribute.UserPrincipal;
 import java.security.Key;
 import java.security.Principal;
+import java.time.LocalDate;
 
 @Authz
 @Provider
@@ -42,12 +43,18 @@ public class SecurityFilter implements ContainerRequestFilter {
         //Otherwise we throw an exception with a message
 
         String authString = containerRequestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
-        if (authString == null || authString.isEmpty() || !authString.startsWith(SecurityUtil.BEARER)) {
+        System.out.println("authString: " + authString + "\n");
+        if (authString == null || authString.isEmpty()/* || !authString.startsWith(SecurityUtil.BEARER)*/) {
+            System.out.println("****************************************************");
+            System.out.println("*The UNAUTHORIZED exception will now be thrown at: " + LocalDate.now());
+            System.out.println("*Token: " + authString);
+            System.out.println("*****************************************************");
             throw new NotAuthorizedException(Response.status(Response.Status.UNAUTHORIZED).build());
         }
 
         String token = authString.substring(SecurityUtil.BEARER.length()).trim();
-
+        System.out.println("Token: " + token);
+        System.out.println("\n**********************************************************\n");
         try {
             Key key = securityUtil.getSecurityKey();
             Jws<Claims> claimsJws = Jwts.parser().setSigningKey(key).parseClaimsJws(token);
@@ -80,7 +87,7 @@ public class SecurityFilter implements ContainerRequestFilter {
                 }
             });
         } catch (Exception e) {
-            containerRequestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
+            containerRequestContext.abortWith(Response.status(Response.Status.NOT_FOUND).build());
         }
     }
 

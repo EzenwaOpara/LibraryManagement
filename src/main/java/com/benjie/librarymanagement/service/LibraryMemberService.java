@@ -8,10 +8,13 @@ package com.benjie.librarymanagement.service;
 import com.benjie.librarymanagement.entity.LibraryMember;
 import com.benjie.librarymanagement.entity.LibraryUser;
 
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 import java.util.Map;
 
+@Stateless
 public class LibraryMemberService {
 
     @Inject
@@ -20,6 +23,7 @@ public class LibraryMemberService {
     private EntityManager entityManager;
     @Inject
     private SecurityUtil securityUtil;
+
 
     public LibraryMember saveMember(LibraryUser libraryMember) {
         Long count = (Long) memberQueryService.countMembersByEmail(libraryMember.getEmail()).get(0);

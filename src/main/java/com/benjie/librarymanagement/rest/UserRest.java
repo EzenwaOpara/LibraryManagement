@@ -48,7 +48,7 @@ public class UserRest {
         }
 
         String token = generateToken(email);
-        return Response.ok().header(HttpHeaders.AUTHORIZATION, SecurityUtil.BEARER + " " + token).build();
+        return Response.ok().header(HttpHeaders.AUTHORIZATION, /*SecurityUtil.BEARER + " " + */token).build();
     }
 
     @Path("create/user")

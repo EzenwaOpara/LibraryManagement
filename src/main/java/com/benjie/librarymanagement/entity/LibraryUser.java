@@ -26,5 +26,4 @@ public class LibraryUser extends LibraryMember {
     public void setBanned(Boolean banned) {
         this.banned = banned;
     }
-
 }
