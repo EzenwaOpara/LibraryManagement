@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3baa947b-cca8-48f9-aaaf-0c387aa6e35f" name="Default Changelist" comment="implemented sign in and sign up">
+    <list default="true" id="3baa947b-cca8-48f9-aaaf-0c387aa6e35f" name="Default Changelist" comment="fix some bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/SecurityFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/UserRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/UserRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/LibraryMemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/LibraryMemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/UserRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/UserRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/UserRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/UserRest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +141,8 @@
       <workItem from="1609858751820" duration="20242000" />
       <workItem from="1609928376013" duration="3055000" />
       <workItem from="1609962350891" duration="3573000" />
-      <workItem from="1609966674556" duration="3804000" />
+      <workItem from="1609966674556" duration="7134000" />
+      <workItem from="1610230019854" duration="713000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1609506801177</created>
@@ -191,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609883274212</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix some bugs">
+      <created>1609971664814</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609971664814</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +226,7 @@
     <MESSAGE value="started working on user service and user rest endpoints" />
     <MESSAGE value="added SecurityFilter and SecurityUtil also added some dependencies" />
     <MESSAGE value="implemented sign in and sign up" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented sign in and sign up" />
+    <MESSAGE value="fix some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some bugs" />
   </component>
 </project>

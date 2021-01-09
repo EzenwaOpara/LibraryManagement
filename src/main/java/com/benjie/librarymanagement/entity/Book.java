@@ -6,6 +6,7 @@ package com.benjie.librarymanagement.entity;
  */
 
 import javax.persistence.*;
+import javax.transaction.Transactional;
 import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.NotNull;
 //import javax.validation.constraints.Pattern;
@@ -17,6 +18,7 @@ import java.util.Collection;
 
 
 @Entity
+@Transactional
 @NamedQuery(name = Book.FIND_ALL_BOOKS, query = "select b from Book b")
 @NamedQuery(name = Book.FIND_BOOKS_BY_TITLE, query = "select b from Book b where b.title like :title")
 @NamedQuery(name = Book.FIND_BOOKS_BY_AUTHOR, query = "select b from Book b where b.author like :author")
