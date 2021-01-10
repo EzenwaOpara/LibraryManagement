@@ -25,6 +25,7 @@ public class BookRest {
     private BookService bookService;
     private int requestCode;
 
+    @Admin
     @POST
     @Path("create")
     public Response createBook(Book book) {
@@ -40,6 +41,7 @@ public class BookRest {
         return Response.created(location).build();
     }
 
+    @Admin
     @PUT
     @Path("update")
     public Response updateBook(@QueryParam("isbn") String isbn, Book book) {
@@ -88,6 +90,7 @@ public class BookRest {
         return Response.noContent().build();
     }
 
+    @Admin
     @DELETE
     @Path("remove")
     @Produces("text/plain")
@@ -103,6 +106,7 @@ public class BookRest {
         return Response.noContent().build();
     }
 
+    @Admin
     @PUT
     @Path("restrict")
     @Produces("text/plain")

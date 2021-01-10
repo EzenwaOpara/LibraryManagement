@@ -6,8 +6,6 @@ package com.benjie.librarymanagement.entity;
  */
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Collection;
 
 @Entity
 public class LibraryUser extends LibraryMember {

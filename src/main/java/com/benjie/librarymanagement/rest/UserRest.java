@@ -48,26 +48,26 @@ public class UserRest {
         }
 
         String token = generateToken(email);
-        return Response.ok().header(HttpHeaders.AUTHORIZATION, /*SecurityUtil.BEARER + " " + */token).build();
+        return Response.ok().header(HttpHeaders.AUTHORIZATION, token).build();
     }
 
     @Path("create/user")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response createUser(@NotNull LibraryUser libraryUser ) {
+    public Response createUser(@NotNull LibraryUser libraryUser) {
         libraryMemberService.saveMember(libraryUser);
         return Response.ok(libraryUser).build();
     }
 
-//    @Path("create/admin")
-//    @POST
-//    @Consumes(MediaType.APPLICATION_JSON)
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public Response createAdmin(@NotNull LibraryAdmin libraryAdmin ) {
-//        libraryMemberService.saveMember(libraryAdmin);
-//        return Response.ok(libraryAdmin).build();
-//    }
+    @Path("create/admin")
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response createAdmin(@NotNull LibraryAdmin libraryAdmin) {
+        libraryMemberService.saveMember(libraryAdmin);
+        return Response.ok(libraryAdmin).build();
+    }
 
     private String generateToken(String email) {
         Key securityKey = securityUtil.getSecurityKey();

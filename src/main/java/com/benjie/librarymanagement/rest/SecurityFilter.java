@@ -24,7 +24,6 @@ import java.io.IOException;
 import java.nio.file.attribute.UserPrincipal;
 import java.security.Key;
 import java.security.Principal;
-import java.time.LocalDate;
 
 @Authz
 @Provider
@@ -43,7 +42,6 @@ public class SecurityFilter implements ContainerRequestFilter {
         //Otherwise we throw an exception with a message
 
         String authString = containerRequestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
-        System.out.println("authString: " + authString + "\n");
         if (authString == null || authString.isEmpty() || !authString.startsWith(SecurityUtil.BEARER)) {
 
             throw new NotAuthorizedException(Response.status(Response.Status.UNAUTHORIZED).build());
