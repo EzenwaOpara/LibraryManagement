@@ -29,7 +29,7 @@ public class SecurityUtil {
     private SecretKey securityKey;
     public static final String HASH_PASSWORD_KEY = "hashedPassword";
     public static final String SALT_KEY = "salt";
-    public static final String BEARER = "bearer";
+    public static final String BEARER = "Bearer";
 
     @Inject
     private MemberQueryService memberQueryService;
