@@ -42,9 +42,4 @@ public class LibraryUserService {
 
         return null;
     }
-
-    public boolean authenticateUser(String email, String password) {
-
-        return false;
-    }
 }

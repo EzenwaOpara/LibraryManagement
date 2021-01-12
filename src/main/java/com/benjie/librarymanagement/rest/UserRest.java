@@ -50,7 +50,7 @@ public class UserRest {
         return Response.ok().header(HttpHeaders.AUTHORIZATION, token).build();
     }
 
-    @Path("create/user")
+    @Path("create")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)

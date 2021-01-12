@@ -29,7 +29,6 @@ public class BookRest {
     @POST
     @Path("create")
     public Response createBook(Book book) {
-        //TODO: Add security to allow only admin to create books
         if (bookService.exists(book.getIsbn())) {
             return Response.status(/*Response.Status.CONFLICT*/ 409,
                     "A book with same ISBN already exists").build();
@@ -45,7 +44,6 @@ public class BookRest {
     @PUT
     @Path("update")
     public Response updateBook(@QueryParam("isbn") String isbn, Book book) {
-        //TODO: Add to check if user is admin
         if (bookService.updateBook(isbn, book) != null) {
             return Response.ok(book).build();
         }
@@ -95,7 +93,6 @@ public class BookRest {
     @Path("remove")
     @Produces("text/plain")
     public Response removeBook(@QueryParam("isbn") String isbn) {
-        //TODO: allow only admin to remove book
         requestCode = bookService.removeBook(isbn);
         if (requestCode == 1) {
             return Response.ok("Successfully removed").build();
@@ -111,8 +108,6 @@ public class BookRest {
     @Path("restrict")
     @Produces("text/plain")
     public Response restrictBook(@QueryParam("isbn") String isbn, @QueryParam("value") boolean state) {
-
-        //TODO: allow only admin to restrict book
         requestCode = bookService.restrictBook(isbn, state);
         if (requestCode == 1) {
             return Response.ok("Successfully restricted").build();

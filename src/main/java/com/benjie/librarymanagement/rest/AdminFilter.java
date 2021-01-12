@@ -47,10 +47,6 @@ public class AdminFilter implements ContainerRequestFilter {
             Jws<Claims> claimsJws = Jwts.parser().setSigningKey(key).parseClaimsJws(token);
             String email = claimsJws.getBody().getSubject();
 
-            System.out.println("**************************************************");
-            System.out.println("***********Email: " + email + "******************************");
-            System.out.println("**************************************************\n");
-
             LibraryUser user = entityManager.createQuery("select l from LibraryUser l where l.email = :email", LibraryUser.class)
                     .setParameter("email", email)
                     .getResultList()
