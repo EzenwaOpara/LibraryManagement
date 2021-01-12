@@ -5,9 +5,8 @@ package com.benjie.librarymanagement.rest;
  * On 12/14/2020 - 10:05 PM
  */
 
-import com.benjie.librarymanagement.entity.LibraryAdmin;
 import com.benjie.librarymanagement.entity.LibraryUser;
-import com.benjie.librarymanagement.service.LibraryMemberService;
+import com.benjie.librarymanagement.service.LibraryUserService;
 import com.benjie.librarymanagement.service.SecurityUtil;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -30,7 +29,7 @@ public class UserRest {
     private UriInfo uriInfo;
 
     @Inject
-    private LibraryMemberService libraryMemberService;
+    private LibraryUserService libraryUserService;
 
     @Path("login")
     @POST
@@ -56,18 +55,10 @@ public class UserRest {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response createUser(@NotNull LibraryUser libraryUser) {
-        libraryMemberService.saveMember(libraryUser);
+        libraryUserService.saveUser(libraryUser);
         return Response.ok(libraryUser).build();
     }
 
-    @Path("create/admin")
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response createAdmin(@NotNull LibraryAdmin libraryAdmin) {
-        libraryMemberService.saveMember(libraryAdmin);
-        return Response.ok(libraryAdmin).build();
-    }
 
     private String generateToken(String email) {
         Key securityKey = securityUtil.getSecurityKey();

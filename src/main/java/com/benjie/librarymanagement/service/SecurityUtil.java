@@ -5,7 +5,7 @@ package com.benjie.librarymanagement.service;
  * On 1/5/2021 - 3:44 PM
  */
 
-import com.benjie.librarymanagement.entity.LibraryMember;
+import com.benjie.librarymanagement.entity.LibraryUser;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.impl.crypto.MacProvider;
 import org.apache.shiro.codec.Hex;
@@ -32,7 +32,7 @@ public class SecurityUtil {
     public static final String BEARER = "Bearer";
 
     @Inject
-    private MemberQueryService memberQueryService;
+    private UserQueryService userQueryService;
 
     @PostConstruct
     public void init() {
@@ -68,7 +68,7 @@ public class SecurityUtil {
     }
 
     public boolean authenticateUser(String email, String password) {
-        LibraryMember member = memberQueryService.findMemberByEmail(email);
+        LibraryUser member = userQueryService.findMemberByEmail(email);
         if (member == null) {
             return false;
         }

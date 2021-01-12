@@ -1,5 +1,4 @@
 C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\service\BookQueryService.java
-C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\service\LibraryMemberService.java
 C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\entity\LibraryUser.java
 C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\rest\BookRest.java
 C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\rest\UserRest.java
@@ -7,11 +6,10 @@ C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\
 C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\service\BookService.java
 C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\rest\Authz.java
 C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\service\SecurityUtil.java
-C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\entity\LibraryMember.java
+C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\service\LibraryUserService.java
 C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\service\CDIProducer.java
-C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\service\MemberQueryService.java
 C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\rest\AdminFilter.java
 C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\rest\Admin.java
-C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\entity\LibraryAdmin.java
 C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\entity\Book.java
+C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\service\UserQueryService.java
 C:\Users\OPARA BENJAMIN\IdeaProjects\LibraryManagement\src\main\java\com\benjie\librarymanagement\rest\LibraryConfig.java

@@ -6,7 +6,7 @@
     <persistence-unit name="booksPersistenceUnit" transaction-type="JTA">
         <class>com.benjie.librarymanagement.entity.Book</class>
         <class>com.benjie.librarymanagement.entity.LibraryAdmin</class>
-        <class>com.benjie.librarymanagement.entity.LibraryMember</class>
+        <class>com.benjie.librarymanagement.entity.LibraryUser</class>
         <class>com.benjie.librarymanagement.entity.LibraryUser</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>

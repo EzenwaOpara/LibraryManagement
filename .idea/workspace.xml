@@ -4,14 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3baa947b-cca8-48f9-aaaf-0c387aa6e35f" name="Default Changelist" comment="added admin security">
+    <list default="true" id="3baa947b-cca8-48f9-aaaf-0c387aa6e35f" name="Default Changelist" comment="message">
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryAdmin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryMember.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/AdminFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/AdminFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/UserRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/UserRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/LibraryMemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/LibraryUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/MemberQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/UserQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/SecurityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/SecurityUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/LibraryAdmin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/LibraryMember.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/LibraryUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/LibraryUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/BookRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/BookRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/UserRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/UserRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/service/MemberQueryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/LibraryAdmin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/LibraryMember.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/LibraryUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/LibraryUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/BookRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/BookRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/UserRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/UserRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/service/MemberQueryService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -158,7 +175,7 @@
       <workItem from="1609962350891" duration="3573000" />
       <workItem from="1609966674556" duration="7134000" />
       <workItem from="1610230019854" duration="6637000" />
-      <workItem from="1610286142047" duration="14052000" />
+      <workItem from="1610286142047" duration="19235000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1609506801177</created>
@@ -237,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610316873620</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="message">
+      <created>1610398043707</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610398043707</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +290,7 @@
     <MESSAGE value="fix some bugs" />
     <MESSAGE value="security fixed" />
     <MESSAGE value="added admin security" />
-    <option name="LAST_COMMIT_MESSAGE" value="added admin security" />
+    <MESSAGE value="message" />
+    <option name="LAST_COMMIT_MESSAGE" value="message" />
   </component>
 </project>
