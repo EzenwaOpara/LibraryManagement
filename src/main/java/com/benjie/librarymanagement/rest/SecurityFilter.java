@@ -33,6 +33,7 @@ public class SecurityFilter implements ContainerRequestFilter {
     @Inject
     SecurityUtil securityUtil;
 
+
     @Override
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
         //Grab token from the header of the request using AUTHENTICATION constant

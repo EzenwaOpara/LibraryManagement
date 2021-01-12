@@ -66,7 +66,7 @@ public class LibraryUser implements Serializable {
     @JoinTable(name = "jnd_lib_member_book",
             joinColumns = @JoinColumn(name = "borrower_fk"),
             inverseJoinColumns = @JoinColumn(name = "book_fk"))
-    private Collection<Book> currentHolder = new ArrayList<>();
+    private Collection<Book> bookCollection = new ArrayList<>();
 
     @PrePersist
     private void init() {
@@ -88,7 +88,7 @@ public class LibraryUser implements Serializable {
                        @Size(min = 6, message = "Password must be at least six (6) character long")
                                String password, String passwordSalt, Boolean banned, Boolean admin,
                        LocalDateTime dateJoined,
-                       Collection<Book> currentHolder) {
+                       Collection<Book> bookCollection) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -99,7 +99,7 @@ public class LibraryUser implements Serializable {
         this.banned = banned;
         this.admin = admin;
         this.dateJoined = dateJoined;
-        this.currentHolder = currentHolder;
+        this.bookCollection = bookCollection;
     }
 
     public LibraryUser() {
@@ -161,15 +161,15 @@ public class LibraryUser implements Serializable {
         this.passwordSalt = passwordSalt;
     }
 
-    public Collection<Book> getCurrentHolder() {
-        return currentHolder;
+    public Collection<Book> getBookCollection() {
+        return bookCollection;
     }
 
-    public void setCurrentHolder(Collection<Book> currentHolder) {
-        this.currentHolder = currentHolder;
+    public void setBookCollection(Book book) {
+        bookCollection.add(book);
     }
 
-    public Boolean getBanned() {
+    public Boolean isBanned() {
         return banned;
     }
 

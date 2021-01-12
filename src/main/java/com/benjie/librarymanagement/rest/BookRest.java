@@ -55,10 +55,6 @@ public class BookRest {
     @Path("borrow")
     @Produces("text/plain")
     public Response borrowBook(@QueryParam("isbn") String isbn) {
-        //TODO: check if user has reached maximum allowable limit
-        // or isn't banned or book isn't restricted or book is still
-        // available. Reduce book count
-        // add the user to borrower's list
         requestCode = bookService.borrowBook(isbn);
 
         if (requestCode == 2) {
@@ -69,6 +65,9 @@ public class BookRest {
         } else if (requestCode == -1) {
             return Response.status(404,
                     "Book with the following ISBN: " + isbn + " does not exit.").build();
+        } else if (requestCode == 3) {
+            return Response.status(403,
+                    "Sorry you are not allowed to borrow this book.\nKindly contact the admin.").build();
         }
         return Response.ok("Successfully Borrowed").build();
     }
@@ -77,13 +76,15 @@ public class BookRest {
     @Path("return")
     @Produces("text/plain")
     public Response returnBook(@QueryParam("isbn") String isbn) {
-        //TODO: check to ensure caller borrowed the book
         requestCode = bookService.returnBook(isbn);
         if (requestCode == 1) {
             return Response.ok("Successfully Returned").build();
         } else if (requestCode == -1) {
             return Response.status(404,
                     "Book with the following ISBN: " + isbn + " does not exit.").build();
+        } else if (requestCode == 0) {
+            return Response.status(304,
+                    "Sorry you did not borrow this book.").build();
         }
         return Response.noContent().build();
     }
@@ -107,7 +108,8 @@ public class BookRest {
     @PUT
     @Path("restrict")
     @Produces("text/plain")
-    public Response restrictBook(@QueryParam("isbn") String isbn, @QueryParam("value") boolean state) {
+    public Response restrictBook(@QueryParam("isbn") String isbn,
+                                 @QueryParam("value") boolean state) {
         requestCode = bookService.restrictBook(isbn, state);
         if (requestCode == 1) {
             return Response.ok("Successfully restricted").build();

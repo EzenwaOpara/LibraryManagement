@@ -6,6 +6,7 @@ package com.benjie.librarymanagement.service;
  */
 
 import com.benjie.librarymanagement.entity.Book;
+import com.benjie.librarymanagement.entity.LibraryUser;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -21,6 +22,9 @@ public class BookService {
 
     @Inject
     private BookQueryService bookQueryService;
+
+    @Inject
+    private UserQueryService userQueryService;
 
     public void createBook(Book book) {
         entityManager.persist(book);
@@ -55,16 +59,22 @@ public class BookService {
     }
 
 
-    //return 1 if successful, 0 if unavailable, 2 if restricted and -1 if book does not exist
+    //return -1 if book does not exist, 0 if unavailable, 1 if successful, 2 if restricted
+    //and 3 if user is banned or exceeded borrowing limit
     public int borrowBook(String isbn) {
+        LibraryUser user = userQueryService.findMemberByEmail(userQueryService.getUserEmail());
+
         if (exists(isbn)) {
             Book book = bookQueryService.findBooksByISBN(isbn).get(0);
             Long availableBooks = book.getAvailableCopies();
             if (book.getLocked()) {
                 return 2;
             }
-            if (availableBooks > 0) {
+            if (availableBooks >= 1 && (user.isBanned() || user.getBookCollection().size() >= 2)) {
+                return 3;
+            } else if (availableBooks > 0) {
                 book.setAvailableCopies(availableBooks - 1);
+                user.setBookCollection(book);
                 entityManager.merge(book);
                 return 1;
             } else {
@@ -75,14 +85,19 @@ public class BookService {
     }
 
     //return 1 if successful and -1 if book does not exist
+    //and 0 if user did not borrow book
     public int returnBook(String isbn) {
-        //TODO check if the caller actually borrowed a book
         if (exists(isbn)) {
             Book book = bookQueryService.findBooksByISBN(isbn).get(0);
-            Long availableBooks = book.getAvailableCopies();
-            book.setAvailableCopies(++availableBooks);
-            entityManager.merge(book);
-            return 1;
+            LibraryUser user = userQueryService.findMemberByEmail(userQueryService.getUserEmail());
+
+            if (user.getBookCollection().contains(book)) {
+                Long availableBooks = book.getAvailableCopies();
+                book.setAvailableCopies(++availableBooks);
+                entityManager.merge(book);
+                return 1;
+            }
+            return 0;
         }
         return -1;
     }

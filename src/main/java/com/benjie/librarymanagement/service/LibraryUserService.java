@@ -23,7 +23,7 @@ public class LibraryUserService {
     private SecurityUtil securityUtil;
 
 
-    public LibraryUser saveUser(LibraryUser libraryUser) {
+    public void saveUser(LibraryUser libraryUser) {
         Long count = (Long) userQueryService.countUsersByEmail(libraryUser.getEmail()).get(0);
 
         if (libraryUser.getId() == null && count == 0) {
@@ -35,7 +35,6 @@ public class LibraryUserService {
             entityManager.persist(libraryUser);
             credMad.clear();
         }
-        return libraryUser;
     }
 
     public String restrictUser(String email) {

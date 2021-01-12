@@ -9,12 +9,17 @@ import com.benjie.librarymanagement.entity.LibraryUser;
 
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.SecurityContext;
 import java.util.List;
 
 public class UserQueryService {
 
     @Inject
     private EntityManager entityManager;
+
+    @Context
+    private SecurityContext securityContext;
 
     public LibraryUser findMemberById(Long id) {
         return entityManager.createNamedQuery(LibraryUser.FIND_MEMBER_BY_ID, LibraryUser.class)
@@ -44,5 +49,9 @@ public class UserQueryService {
     public List countUsersByEmail(String email) {
         return entityManager.createNativeQuery("select count (id)  from LibraryUser where exists (select id from LibraryUser where email = ?)")
                 .setParameter(1, email).getResultList();
+    }
+
+    public String getUserEmail() {
+        return securityContext.getUserPrincipal().getName(); //return the currently executing user email
     }
 }

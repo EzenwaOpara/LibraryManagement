@@ -32,8 +32,6 @@ public class AdminFilter implements ContainerRequestFilter {
     @Inject
     private SecurityUtil securityUtil;
     @Inject
-    private UserQueryService userQueryService;
-    @Inject
     private EntityManager entityManager;
 
     @Override
