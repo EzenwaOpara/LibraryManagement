@@ -93,6 +93,7 @@ public class BookService {
 
             if (user.getBookCollection().contains(book)) {
                 Long availableBooks = book.getAvailableCopies();
+                user.getBookCollection().remove(book);
                 book.setAvailableCopies(++availableBooks);
                 entityManager.merge(book);
                 return 1;

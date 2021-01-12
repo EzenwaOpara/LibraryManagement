@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3baa947b-cca8-48f9-aaaf-0c387aa6e35f" name="Default Changelist" comment="deleted some unnecessary lines and TODOs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/AdminFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/AdminFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/BookRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/BookRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/SecurityFilter.java" afterDir="false" />
+    <list default="true" id="3baa947b-cca8-48f9-aaaf-0c387aa6e35f" name="Default Changelist" comment="updated book rest endpoint">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/UserRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/UserRest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/LibraryUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/LibraryUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/UserQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/UserQueryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +152,7 @@
       <workItem from="1609962350891" duration="3573000" />
       <workItem from="1609966674556" duration="7134000" />
       <workItem from="1610230019854" duration="6637000" />
-      <workItem from="1610286142047" duration="25170000" />
+      <workItem from="1610286142047" duration="26795000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1609506801177</created>
@@ -257,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610476450565</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="updated book rest endpoint">
+      <created>1610482604191</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1610482604191</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +291,7 @@
     <MESSAGE value="message" />
     <MESSAGE value="fixed admin security issue" />
     <MESSAGE value="deleted some unnecessary lines and TODOs" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted some unnecessary lines and TODOs" />
+    <MESSAGE value="updated book rest endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated book rest endpoint" />
   </component>
 </project>

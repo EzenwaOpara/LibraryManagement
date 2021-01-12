@@ -55,8 +55,14 @@ public class UserRest {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response createUser(@NotNull LibraryUser libraryUser) {
-        libraryUserService.saveUser(libraryUser);
-        return Response.ok(libraryUser).build();
+        int requestCode = libraryUserService.saveUser(libraryUser);
+        if (requestCode == 1) {
+            return Response.ok(libraryUser).build();
+        } else if (requestCode == 0) {
+            return Response.status(409,
+                    "Sorry user with email: " + libraryUser.getEmail().toLowerCase() + " exits.").build();
+        }
+        return Response.status(Response.Status.NO_CONTENT).build();
     }
 
 

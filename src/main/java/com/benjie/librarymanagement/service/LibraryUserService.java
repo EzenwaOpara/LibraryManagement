@@ -23,8 +23,11 @@ public class LibraryUserService {
     private SecurityUtil securityUtil;
 
 
-    public void saveUser(LibraryUser libraryUser) {
+    //return 1 if successful, 0 if user with email already exists and -1 for unknown error
+    public int saveUser(LibraryUser libraryUser) {
         Long count = (Long) userQueryService.countUsersByEmail(libraryUser.getEmail()).get(0);
+
+        LibraryUser user = userQueryService.findMemberByEmail(libraryUser.getEmail());
 
         if (libraryUser.getId() == null && count == 0) {
             Map<String, String> credMad = securityUtil.hashPassword(libraryUser.getPassword());
@@ -34,7 +37,10 @@ public class LibraryUserService {
 
             entityManager.persist(libraryUser);
             credMad.clear();
-        }
+            return 1;
+        } else if (libraryUser.getEmail().equalsIgnoreCase(user.getEmail()))
+            return 0;
+        return -1;
     }
 
     public String restrictUser(String email) {
