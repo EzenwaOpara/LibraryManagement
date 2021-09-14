@@ -82,5 +82,4 @@ public class SecurityUtil {
     public SecretKey getSecurityKey() {
         return securityKey;
     }
-
 }

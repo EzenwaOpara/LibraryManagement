@@ -72,7 +72,7 @@ public class UserRest {
                 .setIssuedAt(new Date())
                 .setIssuer(uriInfo.getBaseUri().toString())
                 .setAudience(uriInfo.getAbsolutePath().toString())
-                .setExpiration(securityUtil.toDate(LocalDateTime.now().plusMinutes(5)))
+                .setExpiration(securityUtil.toDate(LocalDateTime.now().plusMinutes(60)))
                 .signWith(SignatureAlgorithm.HS512, securityKey)
                 .compact();
     }

@@ -49,7 +49,7 @@ public class AdminFilter implements ContainerRequestFilter {
                     .setParameter("email", email)
                     .getResultList()
                     .get(0);
-            System.out.println(user.isAdmin());
+            System.out.println("USER IS ADMIN:" + user.isAdmin());
             if (!user.isAdmin()) throw new Exception();
 
         } catch (Exception e) {
