@@ -17,8 +17,8 @@ public class BookQueryService {
     private EntityManager entityManager;
 
     public List<Book> findAllBooks() {
-       return entityManager.createNamedQuery(Book.FIND_ALL_BOOKS, Book.class)
-               .getResultList();
+        return entityManager.createNamedQuery(Book.FIND_ALL_BOOKS, Book.class)
+                .getResultList();
     }
 
     public List<Book> findBooksByTitle(String title) {

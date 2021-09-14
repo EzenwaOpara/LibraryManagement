@@ -67,7 +67,7 @@ public class BookService {
         if (exists(isbn)) {
             Book book = bookQueryService.findBooksByISBN(isbn).get(0);
             Long availableBooks = book.getAvailableCopies();
-            if (book.getLocked()) {
+            if (book.getLockStatus()) {
                 return 2;
             }
             if (availableBooks >= 1 && (user.isBanned() || user.getBookCollection().size() >= 2)) {
@@ -107,10 +107,9 @@ public class BookService {
     public int restrictBook(String isbn, boolean state) {
         if (exists(isbn)) {
             Book book = bookQueryService.findBooksByISBN(isbn).get(0);
-            book.setLocked(state);
+            book.setLockStatus(state);
             entityManager.merge(book);
-            if (state) return 1;
-            else return 0;
+            return 1;
         }
         return -1;
     }

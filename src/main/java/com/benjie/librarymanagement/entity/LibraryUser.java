@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @Entity
-@MappedSuperclass
 @NamedQuery(name = LibraryUser.FIND_MEMBER_BY_NAME, query = "select l from LibraryUser l where l.firstName like :firstName or l.lastName like :lastName")
 @NamedQuery(name = LibraryUser.FIND_MEMBER_BY_ID, query = "select l from LibraryUser l where l.id = :id")
 @NamedQuery(name = LibraryUser.FIND_MEMBER_BY_EMAIL, query = "select l from LibraryUser l where l.email = :email")

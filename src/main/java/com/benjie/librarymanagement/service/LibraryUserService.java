@@ -44,7 +44,8 @@ public class LibraryUserService {
     }
 
     public String restrictUser(String email) {
-
+        //TODO: restrict the user from borrowing books
+        //only admins can do this
         return null;
     }
 }

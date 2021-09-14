@@ -56,7 +56,7 @@ public class Book implements Serializable {
     @NotNull(message = "Illustrations cannot be empty")
     private Boolean illustrations;
 
-    private Boolean locked;
+    private Boolean lockStatus;
 
     @FutureOrPresent
     private LocalDate dateCreated;
@@ -70,6 +70,7 @@ public class Book implements Serializable {
     @FutureOrPresent
     private LocalDate dateReturned;
 
+    @FutureOrPresent
     private LocalDate dateUpdated;
 
     @NotNull
@@ -102,7 +103,7 @@ public class Book implements Serializable {
 
     @PrePersist
     private void init() {
-        setLocked(false);
+        setLockStatus(false);
         setDateCreated(LocalDate.now());
     }
 
@@ -162,12 +163,12 @@ public class Book implements Serializable {
         this.illustrations = illustrations;
     }
 
-    public Boolean getLocked() {
-        return locked;
+    public Boolean getLockStatus() {
+        return lockStatus;
     }
 
-    public void setLocked(Boolean locked) {
-        this.locked = locked;
+    public void setLockStatus(Boolean locked) {
+        this.lockStatus = locked;
     }
 
     public LocalDate getDateCreated() {
