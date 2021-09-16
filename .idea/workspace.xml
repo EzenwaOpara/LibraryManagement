@@ -6,9 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="3baa947b-cca8-48f9-aaaf-0c387aa6e35f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/AdminFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/AdminFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/UserRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/rest/UserRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/SecurityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/service/SecurityUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benjie/librarymanagement/entity/LibraryUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/LibraryUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/entity/LibraryUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/UserRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/rest/UserRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/LibraryManagement-1.0-SNAPSHOT/WEB-INF/classes/com/benjie/librarymanagement/service/BookService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/LibraryUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/entity/LibraryUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/UserRest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/rest/UserRest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benjie/librarymanagement/service/BookService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631627520378</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="set token expiration to 1 hour">
+      <created>1631634777656</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1631634777656</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,13 +305,14 @@
     <MESSAGE value="deleted some unnecessary lines and TODOs" />
     <MESSAGE value="updated book rest endpoint" />
     <MESSAGE value="remove redundant lines" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove redundant lines" />
+    <MESSAGE value="set token expiration to 1 hour" />
+    <option name="LAST_COMMIT_MESSAGE" value="set token expiration to 1 hour" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="239" y="0" key="CommitChangelistDialog2" timestamp="1631627514387">
+    <state x="239" y="0" key="CommitChangelistDialog2" timestamp="1631634776110">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="239" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1631627514387" />
+    <state x="239" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1631634776110" />
     <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1631481755723">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

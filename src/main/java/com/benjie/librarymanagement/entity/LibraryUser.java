@@ -67,10 +67,7 @@ public class LibraryUser implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "book_fk"))
     private Collection<Book> bookCollection = new ArrayList<>();
 
-    @PrePersist
-    private void init() {
-        setBanned(false);
-        setDateJoined(LocalDateTime.now());
+    public LibraryUser() {
     }
 
     public LibraryUser(Long id,
@@ -101,7 +98,10 @@ public class LibraryUser implements Serializable {
         this.bookCollection = bookCollection;
     }
 
-    public LibraryUser() {
+    @PrePersist
+    private void init() {
+        setBanned(false);
+        setDateJoined(LocalDateTime.now());
     }
 
     public Long getId() {
